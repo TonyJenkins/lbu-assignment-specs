@@ -11,11 +11,11 @@ on a website.
 
 Automatic timing apparatus positioned around the park uses advanced computer vision techniques to read the numbers 
 on each runner's singlet as they pass, and record this along with the elapsed time. These times need to be 
-processed so that they can be poste on the website.
+processed so that they can be posted on the website.
 
 ### The Task
 
-You will write a program that  will process the data stream from one of these devices to produce 
+You will write a program that will process the data stream from one of these devices to produce 
 some useful statistics. The device is half way round the course, and is is known that every runner will
 pass it at most once.
 
@@ -111,7 +111,7 @@ Best Time Here: Runner #124
 ```
 
 Finally, a complete run showing how the complete program should look, and also showing some invalid
-date lines:
+data lines:
 
 ```text
 Park Run Timer
