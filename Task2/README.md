@@ -11,7 +11,9 @@ on a website.
 
 Automatic timing apparatus positioned around the park uses advanced computer vision techniques to read the numbers 
 on each runner's singlet as they pass, and record this along with the elapsed time. These times need to be 
-processed so that they can be poste on the website.
+processed so that they can be posted on the website. The
+course is long, so each runner who completes the run
+should pass each timing point exactly once.
 
 ### The Task
 
@@ -35,12 +37,18 @@ runner with number `0012` passed 239 seconds after starting, and runner `01921` 
 The data stream ends when the operator powers off the apparatus. Just before shutting down it sends the single 
 line `END` to mark the end of the stream.
 
+For the purposes of this simulation you should simply enter
+data from the keyboard. Be sure to follow the format exactly.
+
 The required output is:
 * The total number of runners who have been seen.
 * The average time recorded, rendered in minutes and seconds.
 * The fastest time recorded at this point, rendered in minutes and seconds.
 * The slowest time recorded at this point, rendered in minutes and seconds.
 * The number of the runner recording the fastest time (or the first one to do so, if there are several).
+
+Remember that it is known that each runner will pass just once (there
+is no need to handle "repeat appearances" as an error).
 
 Some sample outputs below should make the required output and its format clear. Note especially that the
 average time will probably include fractions of a second - it is fine to round these to some close approximation.
@@ -111,7 +119,7 @@ Best Time Here: Runner #124
 ```
 
 Finally, a complete run showing how the complete program should look, and also showing some invalid
-date lines:
+data lines:
 
 ```text
 Park Run Timer
