@@ -8,12 +8,12 @@ without attempting this.*
 
 ### The Problem
 
-A message has been received that appears to be encrypted. Our finesy codebreakers have failed to decipher it.
-A program is required that will automatically detect the encryption used, and will print the decrypted message.
+A message has been received that appears to be encrypted. Our finest codebreakers have failed to decipher it.
+A program is required that will automatically detect the encryption used, and will hence print the decrypted message.
 
 ### The Task
 
-You have a file that contains a message that is encrypted (there are a few examples in MyBeckett). Your task is
+You have a file that contains a message that is encrypted (there are a few examples in the project repo). Your task is
 to write a program that will decrypt the text.
 
 Your program should be entirely self-contained. It should be provided with the name of the file containing the
@@ -30,7 +30,7 @@ that it is susceptible to a brute-force attack, which is probably the best way t
 You can assume that the message is sufficiently long that a brute-force attack will succeed.
 
 As a guide, the solution running below is about 85 lines long, formatted as per PEP-8. It uses one module of encryption
-function (35 lines) and another utility module (4 lines).
+functions (35 lines) and another utility module (4 lines).
 
 ### Examples
 
@@ -41,7 +41,7 @@ First, note that the program exits if the filename provided does not exist (or c
 
 ```text
 $ py caesar_cracker.py missing.txt
-Cannot open "missing.txt". Sorry about that
+Cannot open "missing.txt". Sorry about that.
 ```
 
 Here is a message, encrypted.
