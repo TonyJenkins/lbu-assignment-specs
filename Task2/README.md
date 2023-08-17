@@ -4,13 +4,13 @@
 
 ### The Problem
 
-A kindly cat owner has installed a cat house in his garden. This acts as a refuge for his feline friend should the creature be caught outside in inclement weather when he is unavailable to open the back door.
+A kindly cat owner has installed a cat house in his garden. This acts as a refuge for his feline friend should the creature be caught outside in inclement weather when its human servant is unavailable to open the back door.
 
 The cat house contains a small camera, along with a motion detector and an RFID reader that detects a chip in the cat's collar. This is connected up to a laptop, which creates a log of when the cat enters and leaves the shelter. If the chip is not detected, but motion is, it can be assumed that the neighbour's cat has trespassed into the shelter. In this case, a loud siren plays automatically, and jets of water are directed at the intruder.
 
 ### The Task
 
-The laptop stores a data stream, that can be analysed. It records when a cat entered, when it left, and whether the cat was an intruder. Times are stored as minutes, with a start of midnight. So midnight is represented as zero, 1am is 60, and 9:30am would be 600 (9 x 60 + 30). There is one file a day.
+The laptop stores a data stream that can be analysed. It records when a cat entered, when it left, and whether the cat was an intruder. Times are stored as minutes, with a start of midnight. So midnight is represented as zero, 1am is 60, and 9:30am would be 600 (9 x 60 + 30). There is one file a day.
 
 The cat house is small, so there can only be one cat in it at a time. It is often empty (the cat likes to bask on the roof).
 
