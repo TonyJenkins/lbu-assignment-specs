@@ -1,10 +1,14 @@
 # Computer Programming Assignments
 
-These are the four tasks for the *Programming Portfolio*. For full details of the assessment refer to the
+These are the three additional tasks for the *Programming Portfolio*. 
+
+Your programs should be hosted in your GitHub repo, along with your weekly work.
+
+For full details of the assessment refer to the
 specification on MyBeckett.
 
 Some folders contain files that may be useful, viz:
-* Task3 contains a sample input file of IDs and names.
-* Task4 contains two (vaguely related) test messages. These are encrypted per the spec, with an unknown shift.
+* Task2 contains a sample input file.
+* Task3 contains a sample password file. (The passwords in it are "encrypted" using simple [ROT-13](https://en.wikipedia.org/wiki/ROT13).)
 
 The versions here are correct and current.
