@@ -4,83 +4,104 @@
 
 ### The Problem
 
-Many organisations are concerned about the security of passwords used for
-access to their systems. Users tend to choose passwords that are easy to remember and therefore often
-dictionary words. These passwords are easy to crack using simple methods. Requiring users to use a mix of
-upper and lower case, special characters, and so on, is better but results in passwords that are difficult
-to remember. Users resort to tactics such as always having the upper case character first, which defeats the
-object and can make passwords easier to crack.
+Pizza takeaways are popular. There are a wide variety to choose from, ranging from international franchises to small local businesses.
 
-A better strategy to ensure users choose (and, importantly, can remember) more complex, longer, passwords
-is needed. A good approach, which ticks all the requirements, is to chain together three random
-words - the resulting password is easy to remember, long, and challenging to crack using brute force methods.
+For reasons that are not clear, the pricing of takeaway pizzas is not straightforward. Prices vary depending on the number ordered, the time of day the order is placed, the day itself, or even whether or not an app was used to place the order.
+
+In this task you will develop a program that will assist one Pizza Provider to calculate how much to charge a customer.
 
 ### The Task
 
-Write a program that generates a password consisting of three random words joined together. The words 
-can be drawn from a list (or lists) declared as ``CONSTANTS`` in the program. The number of possible 
-passwords that can be generated should be at least 500 (which is obviously not enough, but will do for now).
+Beckett Pizza Plaze (henceforth *BPP*) offers a range of pizzas for collection or delivery. The price structure is as follows:
 
-Your program could be used to generate random passwords for, say, a new group of students. So it should start by
-prompting the user to enter the number of passwords needed, and should then display a list of that many passwords.
-The number should be between 1 and 24 inclusive.
+* Every pizza costs £12.
+* A 50% discount applies to all pizza prices on Tuesdays. This discount does not affect delivery cost (see below).
+* Delivery costs £2.50, *unless* there are five or more pizzas in the order, in which case it is free.
+* There is no cost for collection.
+* A discount of 25% of the total price (pizzas plus delivery, if required) is applied if the customer orders via the BPP App. This is *in addition to* the Tuesday Discount, and is applied *after* that discount.
 
-You may ignore the (unlikely) possibility that your program will generate the same random password more than 
-once in the provided list.
+Your program will need to gather various information about the order, and will then display the total price.
 
-As a guide, the model solution to this task, laid out as per PEP-8 is 52 lines long. About 22 of these lines are
-definitions of the wordlists.
+**It will be sufficient to ask the user to enter whether or not it is Tuesday. There is no need to try to work this out from the system clock.**
+
+All money amounts should be displayed as pounds and pence, that is with two decimal places. Any reasonable way to round odd amounts is fine.
 
 ### Examples
 
-The following illustrate what should happen when the program executes in a variety of situations. This version
-of the program is taking the three words from three different lists, the aim being to show how it works, and also to 
-produce hopefully more memorable passwords. There is no need for your program to follow these scheme.
+The following illustrate what should happen when the program executes in a variety of situations. It is not possible to include all the combinations here, but there should be enough.
 
-Here, the program generates a short list of passwords:
+The dialogue here is only an example, but you should be sure to validate whatever input values you need.
 
-```text
-Password Generator
-==================
-
-How many passwords are needed?: 6
-
-  1 --> boredtealcamel
-  2 --> livelygraygorilla
-  3 --> willingorangesnake
-  4 --> impressivetealgorilla
-  5 --> crankynavygorilla
-  6 --> calmtealgorilla
-```
-
-It is important to check boundary conditions, so we see that the program will generate just one password ...
+Here is a simple order for collection, not on a Tuesday, made over the phone.
 
 ```text
-Password Generator
-==================
+BPP Pizza Price Calculator
+==========================
 
-How many passwords are needed?: 1
-
-  1 --> glumbluekangaroo
+How many pizzas ordered? 4
+Is delivery required? n
+Is is Tuesday? n
+Did the customer use the app? n
+Total Price: £48.00.
 ```
 
-... but it behaves sensibly if asked to generate a number that is out of the allowed range:
+Here is the same order, with delivery required. So the delivery charge is added in.
+```text
+BPP Pizza Price Calculator
+==========================
+
+How many pizzas ordered? 4
+Is delivery required? y
+Is is Tuesday? n
+Did the customer use the app? n
+Total Price: £50.50.
+```
+
+This canny customer placed the same order, but used the app to score a 25% discount. Note there is some rounding here (the actual value is ``37.875``).
 
 ```text
-Password Generator
-==================
+BPP Pizza Price Calculator
+==========================
 
-How many passwords are needed?: 0
-Please enter a value between 1 and 24.
+How many pizzas ordered? 4
+Is delivery required? y
+Is is Tuesday? n
+Did the customer use the app? y
+Total Price: £37.88.
 ```
 
-Finally, it also behaves sensibly if the user enters a wildly incorrect value:
+Finally, collecting pizzas on a Tuesday, having used the app, really is the way to go.
 
 ```text
-Password Generator
-==================
+BPP Pizza Price Calculator
+==========================
 
-How many passwords are needed?: cheese
-Please enter a number.
+How many pizzas ordered? 4
+Is delivery required? n
+Is is Tuesday? y
+Did the customer use the app? y
+Total Price: £18.00.
 ```
 
+And the program should handle erroneous input, for example>
+
+```text
+BPP Pizza Price Calculator
+==========================
+
+How many pizzas ordered? -1
+Please enter a positive integer!
+How many pizzas ordered? cheese
+Please enter a number!
+How many pizzas ordered? banana
+Please enter a number!
+How many pizzas ordered? 4
+Is delivery required? dunno
+Please answer "Y" or "N".
+Is delivery required? Y
+Is is Tuesday? wednesday
+Please answer "Y" or "N".
+Is is Tuesday? N
+Did the customer use the app? Y
+Total Price: £37.88.
+```
