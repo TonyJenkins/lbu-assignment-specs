@@ -28,11 +28,13 @@ The first part is the username, which is always lowercase letters. The second fi
 
 Your programs should work as follows:
 
-adduser
-: Adds a new entry to the file. It can be added anywhere. The user should enter the desired username, the real name, and the password. If the username already exists, an error should be shown. It is fine for several users to have the same real name.
+<dl>
+<dt>adduser</dt>
+<dd>Adds a new entry to the file. It can be added anywhere. The user should enter the desired username, the real name, and the password. If the username already exists, an error should be shown. It is fine for several users to have the same real name.</dd>
 
-passwd
-: Changes a user's password. The user should enter their username, and their new password. As is customary, for verification, the new password should be entered twice. *And it should not appear on the screen as it is typed.* If the username is not found, or the passwords do not match, no change should be made.
+<dt>passwd</dt>
+<dd>Changes a user's password. The user should enter their username, and their new password. As is customary, for verification, the new password should be entered twice. *And it should not appear on the screen as it is typed.* If the username is not found, or the passwords do not match, no change should be made.</dd>
+</dl>
 
 The password should be stored in some encrypted form. Anything is fine, even a simple substitution. There are no extra marks for doing something more complicated!
 
