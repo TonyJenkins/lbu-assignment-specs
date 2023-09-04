@@ -18,7 +18,7 @@ This task involves developing implementations of each of these programs.
 
 ### The Task
 
-Your first task is to implement the three commands above. You will provide implementations that will work for a simplified password file. The format of the file is as follows. (In this example ``password_string`` marks where the encrypted passwords are (they would obviously be different on each line)).
+Your first task is to implement the four commands above. You will provide implementations that will work for a simplified password file. The format of the file is as follows. (In this example ``password_string`` marks where the encrypted passwords are (they would obviously be different on each line)).
 
 ```text
 rms:Richard Stallman:password_string
@@ -50,17 +50,17 @@ The password itself should be stored in some encrypted form. Anything is fine, e
 
 Your fourth program should be a simple "login" where the user enters a username and password, and the program reports whether or not they would be allowed to access the system. The password should not be displayed as it is typed, but it is fine to print it out for testing purposes.
 
-In all these programs it is fine to hard-code the name of the file. This will be needed by several of the programs, but you should still store it in only one file. **Remember that it is safe to assume that the file exists, and can be read.**
+In all these programs it is fine to hard-code the name of the file. This will be needed by several of the programs, but you should still store it in only one place. **Remember that it is safe to assume that the file exists, and can be read.**
 
 Likewise, it is quite possible that one or more of your programs could require the same functions. Such code should **not** be duplicated in multiple programs. (Most likely, a well-designed solution will contain one module with many functions, and four quite short programs that use these.)
 
 *In completing the tasks above you may use any module from the Python Standard Library. Indeed, it will be very difficult to achieve good results without doing so!*
 
-*If you want to use serious encryption for passwords, you are welcome to use something like the ``cryptography`` module from PyPi, but there is no need to do so. Nor are there any extra marks for doing so. If you use any modules from PyPi you should use a Virtual Environment, and include in your repo a clear statement of what you have used (the usual ``requirements.txt``) file is fine.*
+*If you want to use serious encryption for passwords, you are welcome to use something like the ``cryptography`` module from PyPi, but there is no need to do so. Nor are there any extra marks for doing so. If you use any modules from PyPi you should use a Virtual Environment (which should obviously not be in your repo), and include in your repo a clear statement of what you have used (the usual ``requirements.txt``) file is fine.*
 
 ### Examples
 
-Starting with an empty file, we used ``adduser`` to make an entry. (Note the password *is* displayed here for debugging and because this would normally be done by a Sysadmin).
+Starting with an empty file, we used ``adduser`` to make an entry. (Note the password *is* displayed here for debugging and because this would normally be done by a Sysadmin. As it can be seen, entering it just the once is fine.).
 
 ```text
 $ cat passwd.txt
@@ -74,7 +74,7 @@ ada:Ada B Lovelace:onoontr
 
 ```
 
-Ada can now login (the password is not displayed):
+Ada can now login (the password is not displayed, but assume it is entered correctly):
 
 ```text
 $ ./login.py
@@ -116,7 +116,7 @@ ada:Ada B Lovelace:onoontr
 abking:Ada Byron King:qvssrerapr
 ```
 
-The original user can be deleted. And ``abking`` can change their password:
+The original user can be deleted. And ``abking`` can change their password (here it is changed to ada's original password):
 
 ```text
 $ ./deluser.py
