@@ -1,0 +1,20 @@
+1,VER,Max Verstappen,Red Bull Racing
+2,SAR,Logan Sargeant,Williams
+3,RIC,Daniel Ricciardo,RB
+4,NOR,Lando Norris,McLaren
+10,GAS,Pierre Gasly,Alpine
+11,PER,Sergio Perez,Red Bull Racing
+14,ALO,Fernando Alonso,Aston Martin Racing
+16,LEC,Charles Leclerc,Ferrari
+18,STR,Lance Stroll,Aston Martin Racing
+20,MAG,Kevin Magnussen,Haas
+22,TSU,Yuki Tsunoda,RB
+23,ALB,Alex Albon,Williams
+24,ZHO,Zhou Guanyu,Kick Sauber
+27,HUL,Niko Hulkenberg,Haas
+31,OCO,Esteban Ocon,Alpine
+44,HAM,Lewis Hamilton,Mercedes
+55,SAI,Carlos Sainz,Ferrari
+63,RUS,George Russell,Mercedes
+77,BOT,Valtteri Bottas,Kick Sauber
+81,PIA,Oscar Piastri,McLaren
