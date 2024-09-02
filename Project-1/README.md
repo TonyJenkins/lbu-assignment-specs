@@ -32,21 +32,21 @@ Your program should accept the name of the file to be processed as a *command-li
 
 For a pass, your program should:
 
-#. Process the command-line argument, and behave sensibly if it is missing, the file does not exist, etc.
-#. Display the race name using the data from the first line of the file.
-#. Display the three-letter code of the driver with the current fastest time. (In the unlikely event that two drivers have exactly the same time, display the first one found.)
+1. Process the command-line argument, and behave sensibly if it is missing, the file does not exist, etc.
+2. Display the race name using the data from the first line of the file.
+3. Display the three-letter code of the driver with the current fastest time. (In the unlikely event that two drivers have exactly the same time, display the first one found.)
 
 To improve on this, your program should:
 
-#. Display the fastest time for *each* driver.
-#. Display the average time overall (that is, the average time for all drivers).
-#. Display the average time for each driver.
+1. Display the fastest time for *each* driver.
+2. Display the average time overall (that is, the average time for all drivers).
+3. Display the average time for each driver.
 
 For top marks you should also:
 
-#. Display the listing of fastest times in descending order of times.
-#. Add additional details for each driver (such as their real name and/or team name) into the output.
-#. Add in any other interesting features that you would like.
+1. Display the listing of fastest times in descending order of times.
+2. Add additional details for each driver (such as their real name and/or team name) into the output.
+3. Add in any other interesting features that you would like.
 
 #### Files
 
